@@ -1,0 +1,8 @@
+.page-body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  width: 100%;
+  height: 100%;
+  font-family: $primary-font;
+  color: $basic-text;
+}

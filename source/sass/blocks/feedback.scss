@@ -1,0 +1,324 @@
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  background-color: $basic-blue;
+  background-image: url("../img/feedback-bg-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: $desktop-width) {
+    background-image: none;
+  }
+}
+
+.feedback__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 1200px;
+  padding-top: 75px;
+  padding-bottom: 113px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
+  @media (max-width: $desktop-width) {
+    justify-content: center;
+    padding-top: 64px;
+    padding-bottom: 104px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 14px;
+    padding-left: 8px;
+    padding-bottom: 42px;
+  }
+}
+
+.feedback h2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-left: -5px;
+  padding-left: 0;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $basic-white;
+
+  @media (max-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-left: -2px;
+    margin-bottom: 13px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.feedback h3 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 50px;
+  padding-left: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $basic-white;
+
+  @media (max-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 53px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
+}
+
+.feedback form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 600px;
+  padding-top: 16px;
+  padding-left: 30px;
+  align-items: flex-start;
+
+  @media (max-width: $desktop-width) {
+    padding-left: 8px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.feedback__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feedback__item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 47%;
+  height: 50px;
+  margin: 0;
+
+  @media (max-width: $desktop-width) {
+    height: 52px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.feedback__item label[for="tel"] {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    bottom: 2px;
+    right: 2px;
+    width: 30px;
+    height: 90%;
+    background-color: $light-blue;
+    z-index: 1;
+  }
+}
+
+.feedback label[for="checkbox"] {
+  position: relative;
+  display: flex;
+  width: 270px;
+  padding-top: 10px;
+  padding-left: 39px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $basic-white;
+  opacity: 0.8;
+  cursor: pointer;
+
+  @media (max-width: $desktop-width) {
+    width: 280px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding-left: 32px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 8px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $basic-white;
+    cursor: pointer;
+
+    @media (max-width: $tablet-width) {
+      top: 11px;
+      left: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.feedback input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 5px;
+  }
+}
+
+.feedback input::placeholder,
+.feedback textarea::placeholder {
+  color: $basic-white;
+}
+
+.feedback input[type="checkbox"]:checked ~ label {
+  &::before {
+    background-image: url("../img/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 5px;
+  }
+
+  &:focus {
+    &::before {
+      outline: 1px solid black;
+    }
+  }
+}
+
+.feedback input[type="checkbox"]:focus ~ label {
+  &::before {
+    outline: 1px solid $basic-black;
+  }
+}
+
+.feedback input[type="text"] {
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  border: none;
+  background-color: $light-blue;
+}
+
+.feedback input[type="number"] {
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  border: none;
+  background-color: $light-blue;
+}
+
+.feedback textarea {
+  width: 100%;
+  min-height: 155px;
+  margin-top: 40px;
+  padding: 14px;
+  margin-bottom: 42px;
+  border: none;
+  background-color: $light-blue;
+
+  @media (max-width: $desktop-width) {
+    margin-top: 42px;
+    min-height: 160px;
+    margin-bottom: 45px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 30px;
+    min-height: 105px;
+    margin-bottom: 30px;
+  }
+}
+
+.feedback button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 45px;
+  padding-top: 8px;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $basic-white;
+  background-color: $basic-blue;
+  border: 1px solid $basic-white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  @media (max-width: $desktop-width) {
+    width: 280px;
+    padding-top: 2px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 290px;
+    padding-top: 2px;
+    margin-bottom: 21px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $basic-white;
+    color: $basic-blue;
+    border: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
