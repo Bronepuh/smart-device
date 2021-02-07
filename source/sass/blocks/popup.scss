@@ -1,0 +1,276 @@
+.popup {
+  position: fixed;
+  top: 136px;
+  left: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transform: translate(-50%);
+  z-index: 2;
+
+  @media (max-width: 490px) {
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--opened {
+    display: flex;
+  }
+
+  &--closed {
+    display: none;
+  }
+}
+
+.popup__container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 490px;
+  margin: 0 auto;
+  padding-top: 29px;
+  padding-bottom: 36px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: $basic-blue;
+
+  @media (max-width: 490px) {
+    width: 100%;
+  }
+}
+
+.popup .popup__toggle {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    background-color: transparent;
+    color: $basic-white;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.popup h2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 13px;
+  margin-left: -5px;
+  padding-left: 5px;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 39px;
+  color: $basic-white;
+}
+
+.popup h3 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0;
+  margin-bottom: 32px;
+  padding-left: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $basic-white;
+}
+
+.popup form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.popup__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.popup__item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 52px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.popup__item label[for="tel-2"] {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    bottom: 2px;
+    right: 2px;
+    width: 30px;
+    height: 90%;
+    background-color: $light-blue;
+    z-index: 1;
+  }
+}
+
+.popup label[for="checkbox-2"] {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $basic-white;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $basic-white;
+    cursor: pointer;
+
+    @media (max-width: $tablet-width) {
+      top: 11px;
+      left: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.popup input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 5px;
+  }
+}
+
+.popup input::placeholder,
+.popup textarea::placeholder {
+  color: $basic-white;
+}
+
+.popup input[name="checkbox-2"]:checked ~ label {
+  &::before {
+    background-image: url("../img/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 5px;
+  }
+
+  &:focus {
+    &::before {
+      outline: 1px solid black;
+    }
+  }
+}
+
+.popup input[name="checkbox-2"]:focus ~ label {
+  &::before {
+    outline: 1px solid $basic-black;
+  }
+}
+
+.popup input[name="name-2"] {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 3px;
+  padding-left: 23px;
+  border: none;
+  background-color: $light-blue;
+}
+
+.popup input[name="tel-2"] {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 4px;
+  padding-left: 23px;
+  border: none;
+  background-color: $light-blue;
+}
+
+.popup textarea {
+  width: 100%;
+  min-height: 105px;
+  margin-top: 0;
+  padding: 14px 23px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: $light-blue;
+}
+
+.popup button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 26px;
+  padding-top: 4px;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $basic-white;
+  background-color: $basic-blue;
+  border: 1px solid $basic-white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-white;
+    color: $basic-blue;
+    border: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

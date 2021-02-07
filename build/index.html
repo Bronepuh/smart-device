@@ -10,6 +10,7 @@
 </head>
 
 <body class="page-body">
+  <div class="page-body__overlay"></div>
   <header class="page-header">
     <div class="page-header__container">
       <div class="page-header__top-menu top-menu">
@@ -149,20 +150,18 @@
         <form action="https://echo.htmlacademy.ru" method="GET">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <h3>Мы проконсультируем Вас бесплатно</h3>
-
           <ul class="feedback__list">
             <li class="feedback__item">
               <label for="name"></label>
-              <input type="text" name="name" id="name" placeholder="Имя">
+              <input type="text" name="name" id="name" placeholder="Имя" value="" minlength="2" maxlength="10" required="">
             </li>
             <li class="feedback__item">
               <label for="tel"></label>
-              <input type="number" name="tel" id="tel" placeholder="Телефон">
+              <input type="number" name="tel" id="tel" placeholder="Телефон" value="" required="">
             </li>
           </ul>
-
           <label for="questions"></label>
-          <textarea name="questions" id="questions" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
+          <textarea name="questions" id="questions" cols="30" rows="4" placeholder="Ваш вопрос" required=""></textarea>
           <button type="submit">Задать вопрос</button>
           <input class="visually-hidden" type="checkbox" id="checkbox" required="">
           <label for="checkbox">Я согласен на обработку персональных данных</label>
@@ -278,6 +277,31 @@
       </div>
     </div>
   </footer>
+
+  <div class="popup popup--closed">
+    <div class="popup__container">
+      <form action="https://echo.htmlacademy.ru" method="GET">
+        <button class="popup__toggle" type="button" aria-label="кнопка раскрытия попапа"></button>
+        <h2>Закажите звонок</h2>
+        <h3>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</h3>
+        <ul class="popup__list">
+          <li class="popup__item">
+            <label for="name-2"></label>
+            <input type="text" name="name-2" id="name-2" placeholder="Имя" value="" minlength="2" maxlength="10" required="">
+          </li>
+          <li class="popup__item">
+            <label for="tel-2"></label>
+            <input type="number" name="tel-2" id="tel-2" placeholder="Телефон" required="">
+          </li>
+        </ul>
+        <label for="questions-2"></label>
+        <textarea name="questions-2" id="questions-2" cols="30" rows="4" placeholder="Ваш вопрос" required=""></textarea>
+        <button type="submit">Отправить</button>
+        <input class="visually-hidden" type="checkbox" id="checkbox-2" name="checkbox-2" required="">
+        <label for="checkbox-2">Я согласен на обработку персональных данных</label>
+      </form>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 
