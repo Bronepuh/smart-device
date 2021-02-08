@@ -97,7 +97,7 @@
   color: $basic-white;
 }
 
-.popup form {
+.popup__form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -125,7 +125,7 @@
   margin-bottom: 30px;
 }
 
-.popup__item label[for="tel-2"] {
+.popup__item label[for="tel2"] {
   &::after {
     position: absolute;
     content: "";
@@ -139,7 +139,7 @@
   }
 }
 
-.popup label[for="checkbox-2"] {
+.popup label[for="checkbox2"] {
   position: relative;
   display: flex;
   width: 100%;
@@ -191,7 +191,7 @@
   color: $basic-white;
 }
 
-.popup input[name="checkbox-2"]:checked ~ label {
+.popup input[name="checkbox2"]:checked ~ label {
   &::before {
     background-image: url("../img/icon-check.svg");
     background-repeat: no-repeat;
@@ -206,13 +206,13 @@
   }
 }
 
-.popup input[name="checkbox-2"]:focus ~ label {
+.popup input[name="checkbox2"]:focus ~ label {
   &::before {
     outline: 1px solid $basic-black;
   }
 }
 
-.popup input[name="name-2"] {
+.popup input[name="name2"] {
   width: 100%;
   height: 100%;
   padding-bottom: 3px;
@@ -221,7 +221,7 @@
   background-color: $light-blue;
 }
 
-.popup input[name="tel-2"] {
+.popup input[name="tel2"] {
   width: 100%;
   height: 100%;
   padding-bottom: 4px;

@@ -1,5 +1,4 @@
 'use strict';
-
 (function () {
   var pageBody = document.querySelector('.page-body');
   var pageFooter = document.querySelector('.page-footer');
@@ -12,9 +11,12 @@
   var popup = document.querySelector('.popup');
   var popupForm = popup.querySelector('form');
   var overlay = document.querySelector('.page-body__overlay');
-  var nameInput = document.querySelector('input[name="name-2"]');
-  var telInput = document.querySelector('input[name="tel-2"]');
-  var questionsInput = document.querySelector('textarea[name="questions-2"]');
+  var nameInput2 = document.querySelector('input[name="name2"]');
+  // var nameInput1 = document.querySelector('input[name="name"]');
+  var telInput2 = document.querySelector('input[name="tel2"]');
+  var telInput1 = document.querySelector('input[name="tel"]');
+  var questionsInput2 = document.querySelector('textarea[name="questions2"]');
+  // var questionsInput1 = document.querySelector('textarea[name="questions"]');
 
 
   if (pageBody && pageFooter && sections && contacts) {
@@ -24,7 +26,6 @@
     contacts.classList.add('contacts--closed');
 
     // аккордеон
-
     var toggleSections = function () {
       if (sections.classList.contains('sections--closed')) {
         sections.classList.remove('sections--closed');
@@ -54,7 +55,6 @@
     });
 
     // попап
-
     var onPopupEscPress = function (evt) {
       if (evt.key === 'Escape') {
         evt.preventDefault();
@@ -69,13 +69,13 @@
       overlay.classList.add('page-body__overlay--active');
       overlay.addEventListener('click', closePopup);
       document.addEventListener('keydown', onPopupEscPress);
-      nameInput.focus();
+      nameInput2.focus();
     };
 
     var clearInputs = function () {
-      nameInput.value = '';
-      telInput.value = '';
-      questionsInput.value = '';
+      nameInput2.value = '';
+      telInput2.value = '';
+      questionsInput2.value = '';
     };
 
     var closePopup = function () {
@@ -93,10 +93,28 @@
 
     popupForm.addEventListener('submit', function () {
       localStorage.clear();
-      localStorage.setItem('name', nameInput.value);
-      localStorage.setItem('tel', telInput.value);
-      localStorage.setItem('questions', questionsInput.value);
+      localStorage.setItem('name', nameInput2.value);
+      localStorage.setItem('tel', telInput2.value);
+      localStorage.setItem('questions', questionsInput2.value);
       clearInputs();
     });
   }
+
+  // маски
+  telInput1.addEventListener('focus', function () {
+    var maskOptions = {
+      mask: '+{7}(000)000-00-00'
+    };
+    var mask = IMask(telInput1, maskOptions);
+    mask.value = telInput1.value;
+  })
+
+  telInput2.addEventListener('focus', function () {
+    var maskOptions = {
+      mask: '+{7}(000)000-00-00'
+    };
+    var mask = IMask(telInput2, maskOptions);
+    mask.value = telInput2.value;
+  })
+
 })();
