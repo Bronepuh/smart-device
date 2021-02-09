@@ -107,7 +107,7 @@
     };
     var mask = IMask(telInput1, maskOptions);
     mask.value = telInput1.value;
-  })
+  });
 
   telInput2.addEventListener('focus', function () {
     var maskOptions = {
@@ -115,6 +115,6 @@
     };
     var mask = IMask(telInput2, maskOptions);
     mask.value = telInput2.value;
-  })
+  });
 
 })();
