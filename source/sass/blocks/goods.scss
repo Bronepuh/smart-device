@@ -50,18 +50,6 @@
   @media (max-width: $tablet-width) {
     gap: 30px;
   }
-
-  & .goods__item:last-child h3 {
-    @media (max-width: $desktop-width) {
-      top: 30px;
-      left: 46px;
-    }
-
-    @media (max-width: $tablet-width) {
-      top: 10px;
-      left: 35px;
-    }
-  }
 }
 
 .goods__item {
@@ -80,6 +68,18 @@
   @media (max-width: $desktop-width) {
     width: 100%;
     height: auto;
+  }
+
+  &:last-child h3 {
+    @media (max-width: $desktop-width) {
+      top: 30px;
+      left: 46px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 10px;
+      left: 35px;
+    }
   }
 }
 

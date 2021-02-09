@@ -6,6 +6,29 @@
   margin-bottom: 50px;
 }
 
+.advantages__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 113px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
+  @media (max-width: $desktop-width) {
+    padding-top: 54px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 37px;
+  }
+}
+
 .advantages__list {
   display: flex;
   flex-wrap: wrap;
@@ -94,7 +117,7 @@
       }
     }
 
-    &.advantages__item:hover {
+    &:hover {
       &::before {
         background-image: url("../img/icon-clock-white.svg");
       }
@@ -121,7 +144,7 @@
       }
     }
 
-    &.advantages__item:hover {
+    &:hover {
       &::before {
         background-image: url("../img/icon-hired-white.svg");
       }
@@ -148,7 +171,9 @@
       }
     }
 
-    &.advantages__item:hover {
+    &:hover {
+      color: $basic-white;
+
       &::before {
         background-image: url("../img/icon-detective-white.svg");
       }
@@ -185,15 +210,15 @@
   &:hover,
   &:focus {
     background-color: $basic-blue;
-
-    & a {
-      color: $basic-white;
-    }
   }
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.advantages__item:hover a {
+  color: $basic-white;
 }
 
 .advantages__item h4 {
@@ -214,6 +239,10 @@
     font-size: 20px;
     line-height: 28px;
   }
+}
+
+.advantages__item:hover h4 {
+  color: $basic-white;
 }
 
 .advantages__item--detective h4 {

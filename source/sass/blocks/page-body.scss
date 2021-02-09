@@ -3,28 +3,11 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   width: 100%;
-  height: 100%;
   font-family: $primary-font;
   color: $basic-text;
+  scroll-behavior: smooth;
 
   &--overlay {
     overflow: hidden;
-  }
-}
-
-.page-body__overlay {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: $basic-black;
-  opacity: 0.5;
-  z-index: 1;
-
-  &--active {
-    display: flex;
   }
 }

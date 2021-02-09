@@ -10,14 +10,11 @@
   var popupCloseButton = document.querySelector('.popup__toggle');
   var popup = document.querySelector('.popup');
   var popupForm = popup.querySelector('form');
-  var overlay = document.querySelector('.page-body__overlay');
+  var overlay = document.querySelector('.overlay');
   var nameInput2 = document.querySelector('input[name="name2"]');
-  // var nameInput1 = document.querySelector('input[name="name"]');
   var telInput2 = document.querySelector('input[name="tel2"]');
   var telInput1 = document.querySelector('input[name="tel"]');
   var questionsInput2 = document.querySelector('textarea[name="questions2"]');
-  // var questionsInput1 = document.querySelector('textarea[name="questions"]');
-
 
   if (pageBody && pageFooter && sections && contacts) {
     sections.classList.remove('sections--nojs');
@@ -66,7 +63,7 @@
       popup.classList.remove('popup--closed');
       popup.classList.add('popup--opened');
       pageBody.classList.add('page-body--overlay');
-      overlay.classList.add('page-body__overlay--active');
+      overlay.classList.add('overlay--active');
       overlay.addEventListener('click', closePopup);
       document.addEventListener('keydown', onPopupEscPress);
       nameInput2.focus();
@@ -82,7 +79,7 @@
       popup.classList.add('popup--closed');
       popup.classList.remove('popup--opened');
       pageBody.classList.remove('page-body--overlay');
-      overlay.classList.remove('page-body__overlay--active');
+      overlay.classList.remove('overlay--active');
       overlay.removeEventListener('click', closePopup);
       document.removeEventListener('keydown', onPopupEscPress);
       clearInputs();
@@ -105,7 +102,7 @@
     var maskOptions = {
       mask: '+{7}(000)000-00-00'
     };
-    var mask = IMask(telInput1, maskOptions);
+    var mask = window.vendor.iMask(telInput1, maskOptions);
     mask.value = telInput1.value;
   });
 
@@ -113,8 +110,7 @@
     var maskOptions = {
       mask: '+{7}(000)000-00-00'
     };
-    var mask = IMask(telInput2, maskOptions);
+    var mask = window.vendor.iMask(telInput2, maskOptions);
     mask.value = telInput2.value;
   });
-
 })();

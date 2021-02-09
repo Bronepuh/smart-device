@@ -107,14 +107,12 @@
 
 .contacts--nojs,
 .contacts--opened {
-  & .contacts__list {
-    @media (max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
+    .contacts__list {
       display: flex;
     }
-  }
 
-  &.contacts button {
-    @media (max-width: $tablet-width) {
+    button {
       display: flex;
       background-image: url("../img/icon-minus.svg");
     }
@@ -122,20 +120,16 @@
 }
 
 .contacts--closed {
-  & h3 {
-    @media (max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
+    h3 {
       margin-bottom: 0;
     }
-  }
 
-  & ul.contacts__list {
-    @media (max-width: $tablet-width) {
+    .contacts__list {
       display: none;
     }
-  }
 
-  &.contacts button {
-    @media (max-width: $tablet-width) {
+    button {
       display: flex;
       background-image: url("../img/icon-plus.svg");
     }

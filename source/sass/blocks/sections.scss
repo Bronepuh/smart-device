@@ -13,49 +13,6 @@
   @media (max-width: $tablet-width) {
     width: 100%;
   }
-
-  &--nojs,
-  &--opened {
-    & h3::after {
-      @media (max-width: $tablet-width) {
-        display: none;
-      }
-    }
-
-    & .sections__list {
-      @media (max-width: $tablet-width) {
-        display: flex;
-      }
-    }
-
-    &.sections button {
-      @media (max-width: $tablet-width) {
-        display: flex;
-        background-image: url("../img/icon-minus.svg");
-      }
-    }
-  }
-
-  &--closed {
-    & h3::after {
-      @media (max-width: $tablet-width) {
-        display: flex;
-      }
-    }
-
-    & .sections__list {
-      @media (max-width: $tablet-width) {
-        display: none;
-      }
-    }
-
-    &.sections button {
-      @media (max-width: $tablet-width) {
-        display: flex;
-        background-image: url("../img/icon-plus.svg");
-      }
-    }
-  }
 }
 
 .sections h3 {
@@ -164,4 +121,39 @@
   background-position: center;
   border: none;
   cursor: pointer;
+}
+
+.sections--nojs,
+.sections--opened {
+  @media (max-width: $tablet-width) {
+    h3::after {
+      display: none;
+    }
+
+    .sections__list {
+      display: flex;
+    }
+
+    button {
+      display: flex;
+      background-image: url("../img/icon-minus.svg");
+    }
+  }
+}
+
+.sections--closed {
+  @media (max-width: $tablet-width) {
+    h3::after {
+      display: flex;
+    }
+
+    .sections__list {
+      display: none;
+    }
+
+    button {
+      display: flex;
+      background-image: url("../img/icon-plus.svg");
+    }
+  }
 }

@@ -102,6 +102,7 @@
   padding-top: 16px;
   padding-left: 30px;
   align-items: flex-start;
+  scroll-behavior: smooth;
 
   @media (max-width: $desktop-width) {
     padding-left: 8px;

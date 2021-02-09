@@ -8,6 +8,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+  scroll-behavior: smooth;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/header-bg-desktop@2x.webp");
