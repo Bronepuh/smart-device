@@ -180,9 +180,15 @@
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
+  color: $basic-white;
 
   @media (max-width: $tablet-width) {
     padding-bottom: 5px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $basic-white;
   }
 }
 
@@ -238,6 +244,12 @@
   margin-bottom: 30px;
   border: none;
   background-color: $light-blue;
+  color: $basic-white;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $basic-white;
+  }
 }
 
 .popup button {

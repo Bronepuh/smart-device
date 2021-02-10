@@ -200,7 +200,7 @@
       }
     }
 
-    &.advantages__item:hover {
+    &:hover {
       &::before {
         background-image: url("../img/icon-tag-white.svg");
       }
@@ -217,7 +217,7 @@
   }
 }
 
-.advantages__item:hover a {
+.advantages__item:hover p {
   color: $basic-white;
 }
 

@@ -209,9 +209,15 @@
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
+  color: $basic-white;
 
   @media (max-width: $tablet-width) {
     padding-bottom: 5px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $basic-white;
   }
 }
 
@@ -265,6 +271,7 @@
   margin-bottom: 42px;
   border: none;
   background-color: $light-blue;
+  color: $basic-white;
 
   @media (max-width: $desktop-width) {
     margin-top: 42px;
@@ -276,6 +283,11 @@
     margin-top: 30px;
     min-height: 105px;
     margin-bottom: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $basic-white;
   }
 }
 

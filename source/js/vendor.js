@@ -4839,9 +4839,5 @@
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-  window.vendor = {
-    iMask: IMask,
-  };
-
 })));
 //# sourceMappingURL=imask.js.map

@@ -98,19 +98,12 @@
   }
 
   // маски
-  telInput1.addEventListener('focus', function () {
-    var maskOptions = {
-      mask: '+{7}(000)000-00-00'
-    };
-    var mask = window.vendor.iMask(telInput1, maskOptions);
-    mask.value = telInput1.value;
-  });
+  var maskOptions = {
+    mask: '+{7}(000)000-00-00'
+  };
+  var mask = new window.IMask(telInput1, maskOptions);
+  mask.value = telInput1.value;
 
-  telInput2.addEventListener('focus', function () {
-    var maskOptions = {
-      mask: '+{7}(000)000-00-00'
-    };
-    var mask = window.vendor.iMask(telInput2, maskOptions);
-    mask.value = telInput2.value;
-  });
+  var mask2 = new window.IMask(telInput2, maskOptions);
+  mask2.value = telInput2.value;
 })();
