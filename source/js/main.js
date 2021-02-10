@@ -99,11 +99,19 @@
 
   // маски
   var maskOptions = {
-    mask: '+{7}(000)000-00-00'
+    mask: '+7(000)000-00-00'
   };
   var mask = new window.IMask(telInput1, maskOptions);
   mask.value = telInput1.value;
 
   var mask2 = new window.IMask(telInput2, maskOptions);
   mask2.value = telInput2.value;
+
+  telInput1.addEventListener('focus', function () {
+    telInput1.value = '+7';
+  });
+
+  telInput2.addEventListener('focus', function () {
+    telInput2.value = '+7';
+  });
 })();
