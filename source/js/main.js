@@ -108,10 +108,10 @@
   mask2.value = telInput2.value;
 
   telInput1.addEventListener('focus', function () {
-    telInput1.value = '+7';
+    telInput1.value = '+7(';
   });
 
   telInput2.addEventListener('focus', function () {
-    telInput2.value = '+7';
+    telInput2.value = '+7(';
   });
 })();
