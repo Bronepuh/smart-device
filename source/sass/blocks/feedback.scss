@@ -145,7 +145,16 @@
   }
 }
 
+.feedback__item label[for="name"] {
+  font-size: 0;
+}
+
+.feedback label[for="questions"] {
+  font-size: 0;
+}
+
 .feedback__item label[for="tel"] {
+  font-size: 0;
   &::after {
     position: absolute;
     content: "";
