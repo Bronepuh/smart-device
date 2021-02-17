@@ -291,6 +291,7 @@
   border: none;
   background-color: $light-blue;
   color: $basic-white;
+  resize: none;
 
   @media (max-width: $desktop-width) {
     margin-top: 42px;
