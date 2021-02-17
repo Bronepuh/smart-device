@@ -5,16 +5,22 @@
   var sections = document.querySelector('.sections');
   var contacts = document.querySelector('.contacts');
   var sectionsToggle = document.querySelector('.sections button');
+  var sectionsToggle1 = document.querySelector('.sections h3');
   var contactsToggle = document.querySelector('.contacts button');
+  var contactsToggle1 = document.querySelector('.contacts h3');
   var popupOpenButton = document.querySelector('.top-menu__button');
   var popupCloseButton = document.querySelector('.popup__toggle');
+  var feedback = document.querySelector('.feedback');
+  var feedbackForm = feedback.querySelector('form');
   var popup = document.querySelector('.popup');
   var popupForm = popup.querySelector('form');
   var overlay = document.querySelector('.overlay');
   var nameInput2 = document.querySelector('input[name="name2"]');
+  var nameInput1 = document.querySelector('input[name="name"]');
   var telInput2 = document.querySelector('input[name="tel2"]');
   var telInput1 = document.querySelector('input[name="tel"]');
   var questionsInput2 = document.querySelector('textarea[name="questions2"]');
+  var questionsInput1 = document.querySelector('textarea[name="questions"]');
 
   if (pageBody && pageFooter && sections && contacts) {
     sections.classList.remove('sections--nojs');
@@ -23,13 +29,45 @@
     contacts.classList.add('contacts--closed');
 
     // аккордеон
+    var openSections = function () {
+      sections.classList.remove('sections--closed');
+      sections.classList.add('sections--opened');
+    };
+
+    var closeSections = function () {
+      sections.classList.add('sections--closed');
+      sections.classList.remove('sections--opened');
+    };
+
+    var openContacts = function () {
+      contacts.classList.remove('contacts--closed');
+      contacts.classList.add('contacts--opened');
+    };
+
+    var closeContacts = function () {
+      contacts.classList.add('contacts--closed');
+      contacts.classList.remove('contacts--opened');
+    };
+
     var toggleSections = function () {
-      if (sections.classList.contains('sections--closed')) {
-        sections.classList.remove('sections--closed');
-        sections.classList.add('sections--opened');
+      if (sections.classList.contains('sections--closed') && contacts.classList.contains('contacts--opened')) {
+        openSections();
+        closeContacts();
+      } else if (sections.classList.contains('sections--closed')) {
+        openSections();
       } else {
-        sections.classList.add('sections--closed');
-        sections.classList.remove('sections--opened');
+        closeSections();
+      }
+    };
+
+    var toggleContacts = function () {
+      if (contacts.classList.contains('contacts--closed') && sections.classList.contains('sections--opened')) {
+        openContacts();
+        closeSections();
+      } else if (contacts.classList.contains('contacts--closed')) {
+        openContacts();
+      } else {
+        closeContacts();
       }
     };
 
@@ -37,17 +75,15 @@
       toggleSections();
     });
 
-    var toggleContacts = function () {
-      if (contacts.classList.contains('contacts--closed')) {
-        contacts.classList.remove('contacts--closed');
-        contacts.classList.add('contacts--opened');
-      } else {
-        contacts.classList.add('contacts--closed');
-        contacts.classList.remove('contacts--opened');
-      }
-    };
+    sectionsToggle1.addEventListener('click', function () {
+      toggleSections();
+    });
 
     contactsToggle.addEventListener('click', function () {
+      toggleContacts();
+    });
+
+    contactsToggle1.addEventListener('click', function () {
       toggleContacts();
     });
 
@@ -59,7 +95,8 @@
       }
     };
 
-    var openPopup = function () {
+    var openPopup = function (evt) {
+      evt.preventDefault();
       popup.classList.remove('popup--closed');
       popup.classList.add('popup--opened');
       pageBody.classList.add('page-body--overlay');
@@ -87,15 +124,22 @@
 
     popupOpenButton.addEventListener('click', openPopup);
     popupCloseButton.addEventListener('click', closePopup);
-
-    popupForm.addEventListener('submit', function () {
-      localStorage.clear();
-      localStorage.setItem('name', nameInput2.value);
-      localStorage.setItem('tel', telInput2.value);
-      localStorage.setItem('questions', questionsInput2.value);
-      clearInputs();
-    });
   }
+
+  // локалСторадж
+  feedbackForm.addEventListener('submit', function () {
+    localStorage.clear();
+    localStorage.setItem('name', nameInput1.value);
+    localStorage.setItem('tel', telInput1.value);
+    localStorage.setItem('questions', questionsInput1.value);
+  });
+
+  popupForm.addEventListener('submit', function () {
+    localStorage.clear();
+    localStorage.setItem('name', nameInput2.value);
+    localStorage.setItem('tel', telInput2.value);
+    localStorage.setItem('questions', questionsInput2.value);
+  });
 
   // маски
   var maskOptions = {

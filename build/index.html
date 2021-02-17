@@ -25,7 +25,7 @@
             <a class="top-menu__link" href="tel:+74950005252">+7 (495) 000 52 52</a>
           </li>
         </ul>
-        <a class="top-menu__button" href="#">Заказать звонок</a>
+        <a class="top-menu__button" href="popup.html">Заказать звонок</a>
       </div>
       <div class="page-header__description description">
         <div class="description__inner">
@@ -42,13 +42,13 @@
   </header>
 
   <main class="page-main">
-    <h1 class="visually-hidden">Добро пожаловать в Лигу А.</h1>
+    <h1 class="visually-hidden">Smart Device</h1>
 
     <section class="page-main__advantages advantages">
       <div class="advantages__container">
         <ul class="advantages__list" id="advantages">
           <li class="advantages__item advantages__item--clock">
-            <div class="advantages__card" tabindex="0">
+            <div class="advantages__card">
               <h4>Оперативные сроки</h4>
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
                 доставлять
@@ -56,20 +56,20 @@
             </div>
           </li>
           <li class="advantages__item advantages__item--hired">
-            <div class="advantages__card" tabindex="0">
+            <div class="advantages__card">
               <h4>Крупные поставщики</h4>
               <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
                 Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
             </div>
           </li>
           <li class="advantages__item advantages__item--detective">
-            <div class="advantages__card" tabindex="0">
+            <div class="advantages__card">
               <h4>Полная конфиденциальность</h4>
               <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
             </div>
           </li>
           <li class="advantages__item advantages__item--tag">
-            <div class="advantages__card" tabindex="0">
+            <div class="advantages__card">
               <h4>Персонализация стоимости</h4>
               <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
                 устраивает.</p>
@@ -103,7 +103,7 @@
               <h3>Производство печатных плат</h3>
               <picture>
                 <!-- 1x: 290x256; 2x: 580x512 -->
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/card-1-mobile@1x.webp, img/card-1-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 320px)" srcset="img/card-1-mobile@1x.webp, img/card-1-mobile@2x.webp 2x">
                 <!-- 1x: 720x256; 2x: 1440x512 -->
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/card-1-tablet@1x.webp, img/card-1-tablet@2x.webp 2x">
                 <!-- 1x: 370x620; 2x: 740x1240 -->
@@ -118,7 +118,7 @@
               <h3>Монтаж печатных плат</h3>
               <picture>
                 <!-- 1x: 290x256; 2x: 580x512 -->
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/card-2-mobile@1x.webp, img/card-2-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 320px)" srcset="img/card-2-mobile@1x.webp, img/card-2-mobile@2x.webp 2x">
                 <!-- 1x: 720x256; 2x: 1440x512 -->
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/card-2-tablet@1x.webp, img/card-2-tablet@2x.webp 2x">
                 <!-- 1x: 370x620; 2x: 740x1240 -->
@@ -133,7 +133,7 @@
               <h3>Комплектующие для светотехники</h3>
               <picture>
                 <!-- 1x: 290x256; 2x: 580x512 -->
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/card-3-mobile@1x.webp, img/card-3-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 320px)" srcset="img/card-3-mobile@1x.webp, img/card-3-mobile@2x.webp 2x">
                 <!-- 1x: 720x256; 2x: 1440x512 -->
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/card-3-tablet@1x.webp, img/card-3-tablet@2x.webp 2x">
                 <!-- 1x: 370x620; 2x: 740x1240 -->
@@ -151,7 +151,7 @@
       <div class="feedback__container">
         <form action="https://echo.htmlacademy.ru" method="GET" id="feedback-form">
           <h2>Остались вопросы? Задайте их нам!</h2>
-          <h3>Мы проконсультируем Вас бесплатно</h3>
+          <p>Мы проконсультируем Вас бесплатно</p>
           <ul class="feedback__list">
             <li class="feedback__item">
               <label for="name">Имя</label>
@@ -163,10 +163,10 @@
             </li>
           </ul>
           <label for="questions">Ваши вопросы</label>
-          <textarea name="questions" id="questions" cols="30" rows="4" placeholder="Ваш вопрос" required=""></textarea>
-          <button type="submit">Задать вопрос</button>
+          <textarea name="questions" id="questions" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
           <input class="visually-hidden" type="checkbox" name="checkbox" id="checkbox" required="">
           <label for="checkbox">Я согласен на обработку персональных данных</label>
+          <button type="submit">Задать вопрос</button>
         </form>
       </div>
     </section>
@@ -247,7 +247,7 @@
         <button type="button" aria-label="кнопка раскрытия списка"></button>
         <ul class="contacts__list">
           <li class="contacts__item">
-            <a href="#">г. Мытищи, Олимпийский проспект, д.10</a>
+            <p>г. Мытищи, Олимпийский проспект, д.10</p>
           </li>
           <li class="contacts__item">
             <a href="tel:+74955894050">+7 (495) 589-40-50</a>
@@ -285,9 +285,8 @@
   <div class="popup popup--closed">
     <div class="popup__container">
       <form class="popup__form" action="https://echo.htmlacademy.ru" method="GET">
-        <button class="popup__toggle" type="button" aria-label="кнопка раскрытия попапа"></button>
         <h2>Закажите звонок</h2>
-        <h3>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</h3>
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <ul class="popup__list">
           <li class="popup__item">
             <label for="name2"></label>
@@ -299,10 +298,11 @@
           </li>
         </ul>
         <label for="questions2"></label>
-        <textarea name="questions2" id="questions2" cols="30" rows="4" placeholder="Ваш вопрос" required=""></textarea>
-        <button type="submit">Отправить</button>
+        <textarea name="questions2" id="questions2" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
         <input class="visually-hidden" type="checkbox" id="checkbox2" name="checkbox2" required="">
         <label for="checkbox2">Я согласен на обработку персональных данных</label>
+        <button type="submit">Отправить</button>
+        <button class="popup__toggle" type="button" aria-label="кнопка раскрытия попапа"></button>
       </form>
     </div>
   </div>

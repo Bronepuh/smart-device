@@ -60,7 +60,6 @@
   padding-left: 44px;
   padding-right: 44px;
   background-color: $basic-white;
-  cursor: pointer;
 
   @media (max-width: 1200px) {
     width: 400px;
@@ -207,8 +206,7 @@
     }
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $basic-blue;
   }
 

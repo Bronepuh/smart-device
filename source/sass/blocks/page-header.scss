@@ -18,18 +18,18 @@
   @media (max-width: $desktop-width) {
     height: 686px;
     background-image: url("../img/header-bg-tablet@1x.png");
-    background-position: inherit;
+    background-position: right;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/header-bg-tablet@2x.png");
     }
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     height: 647px;
     background-image: url("../img/header-bg-mobile@1x.png");
-    background-size: contain;
-    background-position: center;
+    // background-size: contain;
+    // background-position: center;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/header-bg-mobile@2x.png");

@@ -70,7 +70,7 @@
   }
 }
 
-.feedback h3 {
+.feedback p {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -95,6 +95,7 @@
 }
 
 .feedback form {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -155,6 +156,7 @@
 
 .feedback__item label[for="tel"] {
   font-size: 0;
+
   &::after {
     position: absolute;
     content: "";
@@ -169,6 +171,7 @@
 }
 
 .feedback label[for="checkbox"] {
+  order: 11;
   position: relative;
   display: flex;
   width: 270px;
@@ -219,6 +222,7 @@
   align-items: center;
   align-content: center;
   color: $basic-white;
+  border-radius: none;
 
   @media (max-width: $tablet-width) {
     padding-bottom: 5px;
@@ -254,6 +258,12 @@
   &::before {
     outline: 1px solid $basic-black;
   }
+}
+
+.feedback input[type="checkbox"] {
+  position: absolute;
+  bottom: 13px;
+  right: 253px;
 }
 
 .feedback input[type="text"] {
@@ -301,6 +311,7 @@
 }
 
 .feedback button {
+  order: 10;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

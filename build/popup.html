@@ -12,7 +12,7 @@
   <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
 </head>
 
-<body class="page-body">
+<body class="page-body page-body--overlay">
   <header class="page-header">
     <div class="page-header__container">
       <div class="page-header__top-menu top-menu">
@@ -25,7 +25,7 @@
             <a class="top-menu__link" href="tel:+74950005252">+7 (495) 000 52 52</a>
           </li>
         </ul>
-        <a class="top-menu__button" href="popup.html">Заказать звонок</a>
+        <a class="top-menu__button" href="#">Заказать звонок</a>
       </div>
       <div class="page-header__description description">
         <div class="description__inner">
@@ -103,16 +103,13 @@
               <h3>Производство печатных плат</h3>
               <picture>
                 <!-- 1x: 290x256; 2x: 580x512 -->
-                <source type="image/webp" media="(max-width: 320px)"
-                  srcset="img/card-1-mobile@1x.webp, img/card-1-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 320px)" srcset="img/card-1-mobile@1x.webp, img/card-1-mobile@2x.webp 2x">
                 <!-- 1x: 720x256; 2x: 1440x512 -->
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/card-1-tablet@1x.webp, img/card-1-tablet@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/card-1-tablet@1x.webp, img/card-1-tablet@2x.webp 2x">
                 <!-- 1x: 370x620; 2x: 740x1240 -->
                 <source type="image/webp" srcset="img/card-1-desktop@1x.webp, img/card-1-desktop@2x.webp 2x">
                 <!-- 1x: 370x620; 2x: 740x1240 -->
-                <img src="img/card-1-desktop@1x.png" srcset="img/card-1-desktop@2x.png 2x" alt="картинка" width="370"
-                  height="620">
+                <img src="img/card-1-desktop@1x.png" srcset="img/card-1-desktop@2x.png 2x" alt="картинка" width="370" height="620">
               </picture>
             </a>
           </li>
@@ -121,16 +118,13 @@
               <h3>Монтаж печатных плат</h3>
               <picture>
                 <!-- 1x: 290x256; 2x: 580x512 -->
-                <source type="image/webp" media="(max-width: 320px)"
-                  srcset="img/card-2-mobile@1x.webp, img/card-2-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 320px)" srcset="img/card-2-mobile@1x.webp, img/card-2-mobile@2x.webp 2x">
                 <!-- 1x: 720x256; 2x: 1440x512 -->
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/card-2-tablet@1x.webp, img/card-2-tablet@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/card-2-tablet@1x.webp, img/card-2-tablet@2x.webp 2x">
                 <!-- 1x: 370x620; 2x: 740x1240 -->
                 <source type="image/webp" srcset="img/card-2-desktop@1x.webp, img/card-2-desktop@2x.webp 2x">
                 <!-- 1x: 370x620; 2x: 740x1240 -->
-                <img src="img/card-2-desktop@1x.png" srcset="img/card-2-desktop@2x.png 2x" alt="картинка" width="370"
-                  height="620">
+                <img src="img/card-2-desktop@1x.png" srcset="img/card-2-desktop@2x.png 2x" alt="картинка" width="370" height="620">
               </picture>
             </a>
           </li>
@@ -139,16 +133,13 @@
               <h3>Комплектующие для светотехники</h3>
               <picture>
                 <!-- 1x: 290x256; 2x: 580x512 -->
-                <source type="image/webp" media="(max-width: 320px)"
-                  srcset="img/card-3-mobile@1x.webp, img/card-3-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 320px)" srcset="img/card-3-mobile@1x.webp, img/card-3-mobile@2x.webp 2x">
                 <!-- 1x: 720x256; 2x: 1440x512 -->
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/card-3-tablet@1x.webp, img/card-3-tablet@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/card-3-tablet@1x.webp, img/card-3-tablet@2x.webp 2x">
                 <!-- 1x: 370x620; 2x: 740x1240 -->
                 <source type="image/webp" srcset="img/card-3-desktop@1x.webp, img/card-3-desktop@2x.webp 2x">
                 <!-- 1x: 370x620; 2x: 740x1240 -->
-                <img src="img/card-3-desktop@1x.png" srcset="img/card-3-desktop@2x.png 2x" alt="картинка" width="370"
-                  height="620">
+                <img src="img/card-3-desktop@1x.png" srcset="img/card-3-desktop@2x.png 2x" alt="картинка" width="370" height="620">
               </picture>
             </a>
           </li>
@@ -164,16 +155,16 @@
           <ul class="feedback__list">
             <li class="feedback__item">
               <label for="name">Имя</label>
-              <input type="text" name="name" id="name" placeholder="Имя" value="" minlength="2" maxlength="10" required>
+              <input type="text" name="name" id="name" placeholder="Имя" value="" minlength="2" maxlength="10" required="">
             </li>
             <li class="feedback__item">
               <label for="tel">Телефон</label>
-              <input type="text" name="tel" id="tel" placeholder="Телефон" minlength="16" maxlength="16" required>
+              <input type="text" name="tel" id="tel" placeholder="Телефон" minlength="16" maxlength="16" required="">
             </li>
           </ul>
           <label for="questions">Ваши вопросы</label>
           <textarea name="questions" id="questions" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
-          <input class="visually-hidden" type="checkbox" name="checkbox" id="checkbox" required>
+          <input class="visually-hidden" type="checkbox" name="checkbox" id="checkbox" required="">
           <label for="checkbox">Я согласен на обработку персональных данных</label>
           <button type="submit">Задать вопрос</button>
         </form>
@@ -256,7 +247,7 @@
         <button type="button" aria-label="кнопка раскрытия списка"></button>
         <ul class="contacts__list">
           <li class="contacts__item">
-            <p>г. Мытищи, Олимпийский проспект, д.10</p>
+            <a href="#">г. Мытищи, Олимпийский проспект, д.10</a>
           </li>
           <li class="contacts__item">
             <a href="tel:+74955894050">+7 (495) 589-40-50</a>
@@ -289,9 +280,9 @@
     </div>
   </footer>
 
-  <div class="overlay"></div>
+  <div class="overlay overlay--active"></div>
 
-  <div class="popup popup--closed">
+  <div class="popup popup--opened">
     <div class="popup__container">
       <form class="popup__form" action="https://echo.htmlacademy.ru" method="GET">
         <h2>Закажите звонок</h2>
@@ -299,16 +290,16 @@
         <ul class="popup__list">
           <li class="popup__item">
             <label for="name2"></label>
-            <input type="text" name="name2" id="name2" placeholder="Имя" minlength="2" maxlength="10" required>
+            <input type="text" name="name2" id="name2" placeholder="Имя" minlength="2" maxlength="10" required="">
           </li>
           <li class="popup__item">
             <label for="tel2"></label>
-            <input type="text" name="tel2" id="tel2" placeholder="Телефон" maxlength="16" required>
+            <input type="text" name="tel2" id="tel2" placeholder="Телефон" maxlength="16" required="">
           </li>
         </ul>
         <label for="questions2"></label>
         <textarea name="questions2" id="questions2" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
-        <input class="visually-hidden" type="checkbox" id="checkbox2" name="checkbox2" required>
+        <input class="visually-hidden" type="checkbox" id="checkbox2" name="checkbox2" required="">
         <label for="checkbox2">Я согласен на обработку персональных данных</label>
         <button type="submit">Отправить</button>
         <button class="popup__toggle" type="button" aria-label="кнопка раскрытия попапа"></button>

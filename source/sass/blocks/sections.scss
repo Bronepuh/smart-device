@@ -41,6 +41,7 @@
     margin-bottom: 0;
     padding-top: 30px;
     padding-bottom: 29px;
+    cursor: pointer;
 
     &::after {
       position: absolute;
@@ -88,7 +89,6 @@
 .sections__item a {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -138,6 +138,12 @@
       display: flex;
       background-image: url("../img/icon-minus.svg");
     }
+  }
+}
+
+.sections--nojs {
+  button {
+    display: none;
   }
 }
 
